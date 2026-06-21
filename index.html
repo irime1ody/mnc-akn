@@ -9,9 +9,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <style>
-        body, text, span, p, div, h1, button {
-            font-family: 'Prompt', sans-serif !important;
-        }
         body {
             font-family: 'Prompt', sans-serif;
             /* เปลี่ยนพื้นหลังเป็นโทนสีที่กำหนด #FFE5EC และ #FFF4C7 */
@@ -55,8 +52,8 @@
             background: rgba(255, 255, 255, 0.85);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 229, 236, 1);
-            box-shadow: 0 20px 50px -10px rgba(255, 182, 193, 0.3), 
+            border: 1px solid #FFE5EC;
+            box-shadow: 0 20px 50px -10px rgba(255, 229, 236, 0.5), 
                         inset 0 2px 10px rgba(255, 255, 255, 0.5);
         }
 
@@ -83,22 +80,22 @@
                         themeYellow: {
                             50: '#fffdf4',
                             100: '#fffce0',
-                            200: '#fffac7', /* #FFF4C7 โทนหลัก */
-                            300: '#ffeea1',
+                            200: '#FFF4C7', /* #FFF4C7 โทนหลัก */
+                            300: '#f7e9b0',
                             400: '#ffd966', 
                             500: '#e6bd33',
                             600: '#b38f19',
                         },
-                        themeBlue: { /* เปลี่ยนเฉดสีภายในธีมให้สอดคล้องกับโทนชมพูเข้ม/น้ำตาลอบอุ่นเพื่อให้อ่านง่าย */
+                        themeBlue: { /* เปลี่ยนเฉดสีภายในธีมให้สอดคล้องกับโทนชมพูและสีเข้มเพื่อให้อ่านง่ายตามบรีฟสีหลัก */
                             50: '#fff0f3',
-                            100: '#ffe5ec', /* #FFE5EC โทนหลัก */
+                            100: '#FFE5EC', /* #FFE5EC โทนหลัก */
                             200: '#ffccd5',
                             300: '#ffb3c1', 
                             400: '#ff85a1', 
                             500: '#f72585', 
                             600: '#b5179e',
                             700: '#7209b7',
-                            800: '#4a004a', /* ใช้เป็นสีตัวอักษรเพื่อความคมชัดและเข้ากับสีชมพู */
+                            800: '#4a004a', 
                         }
                     }
                 }
@@ -131,12 +128,12 @@
     <div class="max-w-[420px] w-full relative z-10 space-y-5 pb-10">
         
         <div class="text-center pt-2 pb-2 relative">
-            <div class="text-sm font-bold text-themeBlue-600 mb-1 tracking-wider uppercase">Howtopay</div>
+            <div class="text-sm font-bold text-themeBlue-600 mb-1 tracking-wider uppercase">았 Mn cakn & Ir4ngelis ㅉ </div>
             <h1 class="text-2xl font-bold tracking-tight text-themeBlue-500 flex items-center justify-center gap-2">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-themeBlue-400 anim-pulse">
                     <path d="M11.645 20.91l-.007-.003-.022-.012a15.247 15.247 0 01-.383-.218 25.18 25.18 0 01-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0112 5.052 5.5 5.5 0 0116.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 01-4.244 3.17 15.247 15.247 0 01-.383.219l-.022.012-.007.004-.003.001a.752.752 0 01-.704 0l-.003-.001z" />
                 </svg>
-                았 Mn cakn & Ir4ngelis ㅉ
+                Howtopay
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-themeBlue-400 anim-pulse transform -scale-x-100">
                     <path d="M11.645 20.91l-.007-.003-.022-.012a15.247 15.247 0 01-.383-.218 25.18 25.18 0 01-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0112 5.052 5.5 5.5 0 0116.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 01-4.244 3.17 15.247 15.247 0 01-.383.219l-.022.012-.007.004-.003.001a.752.752 0 01-.704 0l-.003-.001z" />
                 </svg>
@@ -167,8 +164,8 @@
                             <svg class="absolute -top-2 -right-2.5 w-4 h-4 text-themeYellow-400 anim-float-3" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
                         </span>
                         <br>
-                        <span class="inline-flex items-center justify-center gap-1 text-sm text-themeBlue-600 mt-2 block">
-                            เช็คชื่อบัญชีก่อนโอนนะคะ
+                        <span class="inline-flex items-center justify-center gap-1 text-sm text-themeBlue-600 mt-2 font-semibold">
+                            เช็คบัญชีกับชื่อธนาคารก่อนโอนนะคะ
                             <svg class="w-4 h-4 text-themeYellow-500 anim-pulse" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
                         </span>
                     </p>
@@ -230,7 +227,7 @@
                         </div>
                     </div>
 
-                    <div class="hidden relative bg-gradient-to-br from-themeBlue-100/90 to-themeBlue-50/90 rounded-[20px] p-3.5 border-2 border-dashed border-themeBlue-300 shadow-sm z-10 overflow-hidden transform transition-transform hover:scale-[1.02] mt-1">
+                    <div class="relative bg-gradient-to-br from-themeBlue-100/90 to-themeBlue-50/90 rounded-[20px] p-3.5 border-2 border-dashed border-themeBlue-300 shadow-sm z-10 overflow-hidden transform transition-transform hover:scale-[1.02] mt-1">
                         <svg class="absolute -right-3 -bottom-3 w-14 h-14 text-themeBlue-200/60 transform -rotate-12 pointer-events-none" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
 
                         <div class="flex items-start gap-3 relative z-10">
