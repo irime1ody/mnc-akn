@@ -15,7 +15,6 @@
             min-height: 100vh;
         }
         
-        /* อนิเมชั่นลอยๆ สำหรับ SVG พื้นหลัง */
         @keyframes float-up-down {
             0%, 100% { transform: translateY(0px) rotate(0deg); }
             50% { transform: translateY(-15px) rotate(10deg); }
@@ -30,7 +29,6 @@
         }
         @keyframes spin-slow { 100% { transform: rotate(360deg); } }
 
-        /* อนิเมชั่นกรอบเส้นประวิ่ง */
         @keyframes dash-animation {
             from { stroke-dashoffset: 0; }
             to { stroke-dashoffset: -24; }
@@ -46,7 +44,6 @@
         .anim-pulse { animation: pulse-soft 3s ease-in-out infinite; }
         .anim-spin { animation: spin-slow 8s linear infinite; }
 
-        /* การ์ดสไตล์ใหม่ */
         .glass-card {
             background: rgba(255, 255, 255, 0.9);
             backdrop-filter: blur(16px);
@@ -212,21 +209,22 @@
                         </div>
                     </div>
 
-                    <!-- โซนบันทึกช่วยจำ / โน้ตสลิป ปรับดีไซน์กล่องข้อความและปุ่มคัดลอกใหม่ -->
                     <div class="bg-[#FFE5EC]/60 border border-pink-200 rounded-2xl p-3.5 flex items-start gap-3 text-left">
                         <div class="bg-white p-1.5 rounded-full shadow-sm text-pink-400 flex-shrink-0 mt-0.5">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-4 h-4">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10" />
                             </svg>
                         </div>
-                        <div class="text-[12.5px] leading-relaxed text-brown-600 w-full">
-                            <span class="font-bold text-pink-500">โน๊ตสลิปแปะสลิปทุกครั้ง</span><br>
-                            เขียนบันทึกช่วยจำหรือโน้ตข้อความทุกครั้ง<br>
+                        <div class="text-[12.5px] leading-relaxed text-brown-600 w-full flex flex-col">
+                            <span class="font-bold text-pink-500">โน๊ตสลิปแปะสลิปทุกครั้ง</span>
+                            <span>เขียนบันทึกช่วยจำหรือโน้ตข้อความทุกครั้ง</span>
                             
-                            <!-- ปรับปุ่มคัดลอกสไตล์เกาหลี มินิมอล -->
-                            <div class="flex items-center justify-between bg-white/80 border border-pink-200/60 rounded-xl p-2.5 my-2 shadow-sm">
+                            <div class="bg-white/80 border border-pink-200/60 rounded-xl p-2.5 my-2 shadow-sm text-center">
                                 <span class="font-semibold text-pink-500 px-1 tracking-wide">“ ให้ค่า cookie , mn cakn “</span>
-                                <button onclick="copyNoteText('ให้ค่า cookie , mn cakn ', this)" class="bg-white hover:bg-pink-50 text-pink-500 text-[11px] font-bold px-3 py-1.5 rounded-full flex items-center gap-1.5 border border-pink-200 shadow-sm transition-all duration-200 active:scale-95">
+                            </div>
+                            
+                            <div class="flex justify-end mb-2">
+                                <button onclick="copyNoteText('ให้ค่า cookie , mn cakn ', this)" class="bg-white hover:bg-pink-50 text-pink-500 text-[11px] font-bold px-4 py-1.5 rounded-full flex items-center gap-1.5 border border-pink-200 shadow-sm transition-all duration-200 active:scale-95">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
                                     <span>คัดลอก</span>
                                 </button>
@@ -256,7 +254,6 @@
     </div>
 
     <script>
-        // ฟังก์ชันหลักที่ใช้ประมวลผลการคัดลอกข้อความ
         function executeCopy(text) {
             const textArea = document.createElement("textarea");
             textArea.value = text;
@@ -278,7 +275,6 @@
             return isSuccess;
         }
 
-        // คัดลอกเลขบัญชีการเงิน
         function copyBankAccount(text, containerElement, type) {
             if (executeCopy(text)) {
                 showToast("คัดลอกเลขบัญชีแล้ว");
@@ -299,7 +295,6 @@
             }
         }
 
-        // คัดลอกข้อความบันทึกช่วยจำ (โน้ตสลิป)
         function copyNoteText(text, buttonElement) {
             if (executeCopy(text)) {
                 showToast("คัดลอกข้อความสำหรับโน้ตสลิปแล้ว");
@@ -309,7 +304,6 @@
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-3 h-3"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
                     <span>สำเร็จ</span>
                 `;
-                // เมื่อคัดลอกสำเร็จ จะเปลี่ยนสไตล์ปุ่มชั่วคราวให้ดูเด่นชัดขึ้น
                 buttonElement.classList.remove('bg-white', 'text-pink-500');
                 buttonElement.classList.add('bg-pink-100', 'text-pink-600');
                 
@@ -321,7 +315,6 @@
             }
         }
 
-        // แสดงผล Toast แจ้งเตือนสเตตัสการคัดลอก
         function showToast(message) {
             const toast = document.getElementById('toast');
             const toastText = document.getElementById('toast-text');
