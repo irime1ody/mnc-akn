@@ -130,12 +130,12 @@
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-pink-400 anim-pulse">
                     <path d="M11.645 20.91l-.007-.003-.022-.012a15.247 15.247 0 01-.383-.218 25.18 25.18 0 01-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0112 5.052 5.5 5.5 0 0116.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 01-4.244 3.17 15.247 15.247 0 01-.383.219l-.022.012-.007.004-.003.001a.752.752 0 01-.704 0l-.003-.001z" />
                 </svg>
-                How to pay 𓂂ׁ⠀았
+                How to pay 
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-pink-400 anim-pulse transform -scale-x-100">
                     <path d="M11.645 20.91l-.007-.003-.022-.012a15.247 15.247 0 01-.383-.218 25.18 25.18 0 01-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0112 5.052 5.5 5.5 0 0116.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 01-4.244 3.17 15.247 15.247 0 01-.383.219l-.022.012-.007.004-.003.001a.752.752 0 01-.704 0l-.003-.001z" />
                 </svg>
             </h1>
-            <p class="text-sm font-medium text-brown-400 mt-1">Mn cakn & Ir4ngelis ㅉׁ⠀⠀⠀𓈒</p>
+            <p class="text-sm font-medium text-brown-400 mt-1">𓂂ׁ⠀았 Mn cakn & Ir4ngelis ㅉׁ⠀⠀⠀𓈒</p>
         </div>
 
         <div class="glass-card rounded-[40px] p-3 relative z-10">
@@ -226,10 +226,10 @@
                         </div>
                     </div>
 
-                    <div class="relative bg-white rounded-[24px] p-5 border border-pink-200 shadow-lg shadow-pink-100/30 z-10 overflow-hidden mt-1">
+                    <div class="relative bg-white/40 backdrop-blur-md rounded-[24px] p-5 border border-white/60 shadow-lg shadow-pink-100/20 z-10 overflow-hidden mt-1">
                         <div class="relative z-10 flex flex-col gap-3">
                             <div class="flex justify-between items-center">
-                                <span class="bg-pink-500 text-white text-[11px] font-bold px-3 py-1 rounded-full tracking-wider shadow-sm">
+                                <span class="bg-pink-500/80 backdrop-blur-sm text-white text-[11px] font-bold px-3 py-1 rounded-full tracking-wider shadow-sm">
                                     กฎป้องกันการแอบอ้าง
                                 </span>
                             </div>
@@ -237,10 +237,10 @@
                             <div class="text-[13px] text-brown-600 leading-relaxed text-left space-y-2">
                                 <p class="font-medium">เขียนบันทึกช่วยจำหรือโน้ตข้อความทุกครั้ง</p>
                                 
-                                <div onclick="copyNote('ให้ค่า cookie , mn cakn', this)" class="group relative flex items-center justify-between bg-[#fff5f7] border border-pink-200 rounded-[15px] px-4 py-3 cursor-pointer transition-all hover:bg-pink-100/40 active:scale-[0.99]">
+                                <div onclick="copyNote('ให้ค่า cookie , mn cakn', this)" class="group relative flex items-center justify-between bg-white/50 backdrop-blur-sm border border-pink-200/60 rounded-[15px] px-4 py-3 cursor-pointer transition-all hover:bg-white/80 active:scale-[0.99] shadow-sm">
                                     <span class="font-bold text-pink-500 text-[14px] tracking-wide">“ ให้ค่า cookie , mn cakn “</span>
-                                    <div class="flex items-center gap-1 text-[#00654e] font-semibold text-[11px] bg-[#e6f4f0] px-2.5 py-1 rounded-full shrink-0 shadow-sm ml-2">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="shrink-0">
+                                    <div class="flex items-center gap-1 text-pink-600 font-semibold text-[11px] bg-pink-100/60 backdrop-blur-sm px-2.5 py-1 rounded-full shrink-0 shadow-sm ml-2 transition-colors group-hover:bg-pink-500 group-hover:text-white">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="shrink-0 opacity-80">
                                             <rect width="14" height="14" x="8" y="8" rx="2" ry="2"/>
                                             <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/>
                                         </svg>
@@ -346,7 +346,6 @@
                 document.execCommand('copy');
                 showToast("คัดลอกโน้ตช่วยจำแล้ว");
 
-                // เปลี่ยนข้อความในปุ่มเล็กให้เป็น "สำเร็จ" ชั่วคราว
                 const statusText = element.querySelector('.copy-status-text');
                 if (statusText) {
                     statusText.textContent = "สำเร็จ";
